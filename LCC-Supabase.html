@@ -9,7 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- AOS CSS (ya lo tenés bien) -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Tu JS que usa AOS (después de cargar AOS) -->
+    <script src="app-supabase.js" defer></script>
     <title>Licenciatura en Ciencias de la Computacion</title>
 </head>
 <body class="bg-[#FFFBEE] min-h-screen flex flex-col">
@@ -57,7 +64,7 @@
             </div>
         </div>
     </main>
-    <div class=" w-full mx-auto max-w-3xl p-4" id="años-container" data-aos="fade-up">
+    <div class=" w-full mx-auto max-w-3xl p-4 mt-10" id="años-container"  >
       <!--ACA VAN AÑOS-->
       </div>
     <!--footer-->
@@ -76,5 +83,5 @@
       }
     }
   </script>
-<script src="app-supabase.js"></script>
+  
 </html>

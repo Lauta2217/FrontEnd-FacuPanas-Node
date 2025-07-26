@@ -28,7 +28,8 @@ async function cargar() {
       // Crear botones para cada año
       for( let h = 0; h< añotope;h++){
           const año = document.createElement('div');
-          año.className = 'mb-4 rounded-md border border-[#3D0814]'
+          año.className = 'mb-4 rounded-md border border-[#3D0814]' 
+          año.setAttribute('data-aos', 'fade-up');
           año.innerHTML = `
           <button onclick="toggleSection('anio${h+1}')" class="w-full rounded-t-md bg-[#3D0814] px-4 py-2 text-left poppins-bold text-[#E7F9A9] ">📘 ${h+1}º Año</button>
           <div id="anio${h+1}" class="hidden space-y-2 bg-[#C6B38E]/30 px-4 py-2" >
@@ -66,4 +67,8 @@ async function cargar() {
       });
       }
     }
-    document.addEventListener('DOMContentLoaded', cargar);
+    document.addEventListener('DOMContentLoaded', async () => {
+    await cargar();      // tu función que genera contenido dinámico
+    AOS.init();          // Inicializa AOS
+    AOS.refresh();       // Refresca por si acaso
+  });
