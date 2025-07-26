@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<script defer>
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      if (section) {
+        section.classList.toggle('hidden');
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fuente.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Licenciatura en Ciencias de la Computacion</title>
+</head>
+<body class="bg-[#FFFBEE] min-h-screen flex flex-col">
+   <!--navbar-->
+    <header class="w-full h-20">
+        <nav class="w-full h-full bg-[#3D0814] flex items-center px-3">
+            <a href="index.html" class="flex items"> 
+                <svg width="55" height="59" viewBox="0 0 55 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M27.9365 39.5531C27.594 39.5531 27.2543 39.4848 26.9161 39.3464L11.271 32.7724C10.9884 33.702 10.8457 34.8978 10.8457 36.6456C11.8661 37.39 12.8622 38.886 12.8622 41.4682C12.8622 43.0487 12.2343 44.1852 11.6948 44.9422C14.0153 48.3335 20.4029 50.7736 27.9393 50.7736C37.4351 50.7736 45.1314 46.9022 45.1314 42.1335C45.1314 41.0798 45.1314 36.7768 45.1314 32.553L28.954 39.3464C28.62 39.4848 28.2804 39.5531 27.9365 39.5531Z" fill="white"/>
+<mask id="mask0_141_7" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="11" width="55" height="48">
+<path d="M0 11.5866H54.8V59H0V11.5866Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_141_7)">
+<path d="M54.0653 22.4998L28.2765 11.6678C28.0538 11.5761 27.8198 11.5761 27.5986 11.6678L1.80978 22.4998C1.37167 22.6833 1.07483 23.2011 1.07483 23.7837C1.07483 24.3645 1.37167 24.8824 1.80978 25.0658L7.72219 27.549C6.36075 29.5378 5.57015 32.3393 5.28045 36.8994C4.34571 37.455 3.6864 38.6382 3.6864 40.0299C3.6864 41.4469 4.35998 42.6516 5.32326 43.1947C4.48271 52.4155 0.101562 55.4886 0.101562 56.2762C0.101562 56.6771 3.49517 58.9842 4.30004 58.9842C5.54731 58.9842 8.53848 56.3193 8.53848 50.5653C8.53848 47.1758 8.29587 44.6134 8.04043 42.7973C8.72971 42.1661 9.20921 41.1879 9.20921 40.0299C9.20921 38.7658 8.64836 37.7085 7.84634 37.1008C8.30016 29.5755 10.1454 28.315 14.6107 25.9811C15.0588 25.7599 15.9037 25.3283 16.3903 25.0748C17.2679 24.6199 18.06 24.2135 18.822 23.8287C21.2781 22.6005 23.353 21.6116 24.9371 20.8779C26.6724 20.0975 27.4502 19.8134 27.4773 19.8026C28.1423 19.5203 28.8816 19.9735 29.1085 20.8258C29.3339 21.6763 28.9729 22.5969 28.2964 22.8847C28.2451 22.9062 25.2282 23.9923 17.3778 28.0795C16.8726 28.3438 16.3903 28.5812 15.9336 28.8095C15.0032 29.2717 14.2311 29.6421 13.5846 30.0161L27.5986 35.8996C27.7099 35.9446 27.8212 35.9679 27.9368 35.9679C28.0538 35.9679 28.1652 35.9446 28.2765 35.8978L54.0653 25.0658C54.5034 24.8824 54.8002 24.3645 54.8002 23.7837C54.8002 23.2011 54.5034 22.6833 54.0653 22.4998Z" fill="white"/>
+</g>
+                </svg>
+                <div class="flex flex-col px-2 mt-2">
+                    <p class="text-white text-xl ">FacuPanas</p>
+                    <p class="text-white text-[10px]"">Tu Campus Virtual, siempre a mano</p>
+                </div>
+            </a>
+           
+            <a href="formulario.html"class="w-[54px] h-[54px] ml-auto mt-2"><img src="Icono descarga.png"  alt="Icono descarga"></a>
+        </nav>
+    </header>
+    <!--Info carrera-->
+    <main>
+        <div class="w-full min-h-[300px] flex flex-col items-center bg-[#D6CAB2] rounded-b-lg shadow-md shadow-black/25 pb-10"> <!-- Añadido min-h y pb-10 -->
+            <div class="w-[90%] h-full mt-8 m-auto flex flex-col md:flex-row gap-8 items-center"> <!-- Cambiado h-[60%] por h-full -->
+                <!-- Contenedor de texto -->
+                <div class="flex-1 text-wrap">
+                    <h1 class="text-[32px] text-[#3D0814] poppins-black">Licenciatura en Ciencias de la Computación</h1>
+                    <p class="text-[16px] poppins-regular mt-2"> La Licenciatura en Ciencias de la Computación forma profesionales con sólidos conocimientos teóricos y prácticos sobre algoritmos, estructuras de datos, programación, arquitectura de computadoras, inteligencia artificial, bases de datos y más. Está orientada al diseño y análisis de software complejo, investigación en informática y desarrollo de tecnologías innovadoras.</p>
+                </div>
+                
+                <!-- Contenedor de imagen (URL externa) -->
+                <div class="hidden lg:block w-full lg:w-[40%] md:w-[40%] flex justify-center">
+                    <img 
+                        src="https://media.licdn.com/dms/image/C5112AQHQhtmZgE9PYg/article-cover_image-shrink_600_2000/0/1520105051544?e=2147483647&v=beta&t=1wD4R5xA4uco-I4FNsAGvq4U1vN86pziWhWlTA7z8Iw" 
+                        alt="Estudiante de Ciencias de la Computación"
+                        class="w-full max-w-[350px] h-auto object-contain rounded-lg border-[#3D0814]/20 shadow-lg"
+                        onerror="this.src='https://via.placeholder.com/350x200?text=Imagen+no+disponible'"
+                    >
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <div class=" w-full mx-auto max-w-3xl p-4">
+        <div class="mb-4 rounded-md border border-[#3D0814]">
+          <button onclick="toggleSection('anio1')" class="w-full rounded-t-md bg-[#3D0814] px-4 py-2 text-left poppins-bold text-[#E7F9A9] ">📘 1º Año</button>
+          <div id="anio1" class="hidden space-y-2 bg-[#C6B38E]/30 px-4 py-2">
+            <div>
+              <button onclick="toggleSection('materia1')" class="poppins-bold text-[#3D0814] hover:underline">➤ Matemática I</button>
+              <div id="materia1" class="mt-1 ml-4 hidden space-y-1 text-sm text-[#442F38]">
+                <p>📄 Guía 1 - Funciones</p>
+                <p>📝 Parcial 1 - Resuelto</p>
+                <p>📚 Final 2022 - Completo</p>
+              </div>
+            </div>
+            <div>
+              <button onclick="toggleSection('materia2')" class="poppins-bold text-[#3D0814] hover:underline">➤ Programación I</button>
+              <div id="materia2" class="mt-1 ml-4 hidden space-y-1 text-sm text-[#442F38]">
+                <p>📄 Apunte estructuras secuenciales</p>
+                <p>📝 Parcial 1 con resolución</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!--footer-->
+    <footer class="w-full h-20 bg-[#3D0814] flex items-center justify-center mt-20">
+        <div class="flex flex-col  px-2 items-center">
+                <p class="text-white text-[14px] poppins-regular">© 2025 FacuPanas. Todos los derechos reservados.</p>
+                <p class="text-white text-[13px] poppins-regular">“Proyecto estudiantil sin fines de lucro.”</p>
+            </div>
+    </footer>
+</body>
+</html>
