@@ -1,0 +1,10 @@
+Método	Equivale a	Ejemplo
+.eq()	WHERE columna = valor	.eq('nombre', 'Licenciatura')
+.neq()	WHERE columna != valor	.neq('codpropuesta', 'E010')
+.lt()	<	.lt('id', 10)
+.lte()	<=	.lte('id', 10)
+.gt()	>	.gt('id', 5)
+.gte()	>=	.gte('id', 5)
+.like()	LIKE	.like('nombre', '%Ciencias%')
+.ilike()	ILIKE (case insensitive LIKE)	.ilike('nombre', '%sistemas%')
+.is()	IS (para NULL)	.is('fecha', null)
