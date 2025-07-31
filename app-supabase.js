@@ -31,8 +31,8 @@ async function cargar() {
           año.className = 'mb-4 rounded-md border border-[#3D0814]' 
           año.setAttribute('data-aos', 'fade-up');
           año.innerHTML = `
-          <button onclick="toggleSection('anio${h+1}')" class="w-full rounded-t-md bg-[#3D0814] px-4 py-2 text-left poppins-bold text-[#E7F9A9] ">📘 ${h+1}º Año</button>
-          <div id="anio${h+1}" class="hidden space-y-2 bg-[#C6B38E]/30 px-4 py-2" >
+          <button onclick="toggleSection('anio${h+1}')" class="w-full rounded-t-md bg-[#3D0814] px-4 py-2 text-left poppins-black text-[#E7F9A9] lg:text-[30px]">📘 ${h+1}º Año</button>
+          <div id="anio${h+1}" class="hidden space-y-2 bg-[#C6B38E]/30 px-4 py-2 poppins-bold" >
             <!--ACA VAN LAS MATERIAS -->
           </div>
         </div>
@@ -50,16 +50,16 @@ async function cargar() {
           .filter(a => a.codmateria === materia.codmateria)
           .map(a =>{
             const icono = (a.tipo === "practica") ? "📝" : "📄";
-            return `<a href="${a.url}" target="_blank" class="block hover:underline">${icono} ${a.nombre_archivo}</a>`;
+            return `<a href="${a.url}" target="_blank" class="block hover:underline ">${icono} ${a.nombre_archivo}</a>`;
           })
           .join('');
 
         card.innerHTML = `
-          <button onclick="toggleSection('${materia.codmateria}')" class="poppins-bold text-[#3D0814] hover:underline">
+          <button onclick="toggleSection('${materia.codmateria}')" class="poppins-bold text-[#3D0814] hover:underline lg:text-[20px]">
             ➤ ${materia.nombre}
           </button>
-          <div id="${materia.codmateria}" class="mt-1 ml-4 hidden space-y-1 text-sm text-[#442F38]">
-            ${archivosHTML || '<p class="text-gray-500">No hay archivos.</p>'}
+          <div id="${materia.codmateria}" class="mt-1 ml-4 hidden space-y-1 text-sm text-[#442F38] lg:text-[18px]">
+            ${archivosHTML || '<p class="text-gray-500 lg:text-[18px] ">No hay archivos.</p>'}
           </div>
   `;
         contenedor_materias.appendChild(card);

@@ -44,16 +44,14 @@
     </header>
     <!--Info carrera-->
     <main>
-        <div class="w-full min-h-[300px] flex flex-col items-center bg-[#D6CAB2] rounded-b-lg shadow-md shadow-black/25 pb-10"> <!-- Añadido min-h y pb-10 -->
-            <div class="w-[90%] h-full mt-8 m-auto flex flex-col md:flex-row gap-8 items-center"> <!-- Cambiado h-[60%] por h-full -->
-                <!-- Contenedor de texto -->
+        <!--<div class="w-full min-h-[300px] flex flex-col items-center bg-[#D6CAB2] rounded-b-lg shadow-md shadow-black/25 pb-10">
+            <div class="w-[90%] h-full mt-8 m-auto flex flex-col md:flex-row gap-8 items-center text-wrap lg:w-[50%] lg:ml-10">
                 <div class="flex-1 text-wrap">
-                    <h1 class="text-[32px] text-[#3D0814] poppins-black">Licenciatura en Ciencias de la Computación</h1>
-                    <p class="text-[16px] poppins-regular mt-2"> La Licenciatura en Ciencias de la Computación forma profesionales con sólidos conocimientos teóricos y prácticos sobre algoritmos, estructuras de datos, programación, arquitectura de computadoras, inteligencia artificial, bases de datos y más. Está orientada al diseño y análisis de software complejo, investigación en informática y desarrollo de tecnologías innovadoras.</p>
+                    <h1 class="text-[32px] text-[#3D0814] poppins-black lg:text-[32px]">Licenciatura en Ciencias de la Computación</h1>
+                    <p class="text-[16px] poppins-regular mt-2 lg:text-[18px]"> La Licenciatura en Ciencias de la Computación forma profesionales con sólidos conocimientos teóricos y prácticos sobre algoritmos, estructuras de datos, programación, arquitectura de computadoras, inteligencia artificial, bases de datos y más. Está orientada al diseño y análisis de software complejo, investigación en informática y desarrollo de tecnologías innovadoras.</p>
                 </div>
-                
-                <!-- Contenedor de imagen (URL externa) -->
-                <div class="hidden lg:block w-full lg:w-[40%] md:w-[40%] flex justify-center">
+            </div>
+                <div class="hidden lg:w-auto lg:h-auto lg:block lg:mr-10">
                     <img 
                         src="https://media.licdn.com/dms/image/C5112AQHQhtmZgE9PYg/article-cover_image-shrink_600_2000/0/1520105051544?e=2147483647&v=beta&t=1wD4R5xA4uco-I4FNsAGvq4U1vN86pziWhWlTA7z8Iw" 
                         alt="Estudiante de Ciencias de la Computación"
@@ -61,6 +59,14 @@
                         onerror="this.src='https://via.placeholder.com/350x200?text=Imagen+no+disponible'"
                     >
                 </div>
+        </div> -->
+        <div class=" w-full h-auto flex flex-col items-center bg-[#D6CAB2] rounded-b-lg shadow-md shadow-black/25 lg:flex-row pb-10">
+            <div class="w-[90%] h-[60%] mt-8  m-auto text-wrap lg:w-[50%] lg:ml-10" >
+                <h1 class="text-[24px] text-[#3D0814] poppins-black lg:text-[32px]">Licenciatura en Ciencias de la Computación</h1>
+                <p class="text-[16px] poppins-regular mt-2 lg:text-[18px]">La Licenciatura en Ciencias de la Computación forma profesionales con sólidos conocimientos teóricos y prácticos sobre algoritmos, estructuras de datos, programación, arquitectura de computadoras, inteligencia artificial, bases de datos y más. Está orientada al diseño y análisis de software complejo, investigación en informática y desarrollo de tecnologías innovadoras.</p>
+            </div>
+            <div class="hidden lg:w-auto lg:h-auto lg:block lg:mr-10 ">
+                <img src="https://media.licdn.com/dms/image/C5112AQHQhtmZgE9PYg/article-cover_image-shrink_600_2000/0/1520105051544?e=2147483647&v=beta&t=1wD4R5xA4uco-I4FNsAGvq4U1vN86pziWhWlTA7z8Iw" class="w-full max-w-[350px] mt-7"/>
             </div>
         </div>
     </main>
@@ -68,7 +74,7 @@
       <!--ACA VAN AÑOS-->
       </div>
     <!--footer-->
-    <footer class="w-full h-20 bg-[#3D0814] flex items-center justify-center mt-20">
+    <footer class="w-full h-20 bg-[#3D0814] flex items-center justify-center mt-auto mb-0">
         <div class="flex flex-col  px-2 items-center">
                 <p class="text-white text-[14px] poppins-regular">© 2025 FacuPanas. Todos los derechos reservados.</p>
                 <p class="text-white text-[13px] poppins-regular">“Proyecto estudiantil sin fines de lucro.”</p>
