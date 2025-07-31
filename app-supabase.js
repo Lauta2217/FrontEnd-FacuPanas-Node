@@ -55,7 +55,7 @@ async function cargar() {
           .join('');
 
         card.innerHTML = `
-          <button onclick="toggleSection('${materia.codmateria}')" class="poppins-bold text-[#3D0814] hover:underline lg:text-[20px]">
+          <button onclick="toggleSection('${materia.codmateria}')" class="poppins-bold text-[#3D0814] hover:underline w-full text-left break-words lg:text-[20px]">
             ➤ ${materia.nombre}
           </button>
           <div id="${materia.codmateria}" class="mt-1 ml-4 hidden space-y-1 text-sm text-[#442F38] lg:text-[18px]">
