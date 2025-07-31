@@ -82,12 +82,16 @@
     </footer>
 </body>
 <script defer>
-    function toggleSection(id) {
-      const section = document.getElementById(id);
-      if (section) {
+  function toggleSection(id) {
+    const allSections = document.querySelectorAll('[id^="anio"]');
+    allSections.forEach(section => {
+      if (section.id === id) {
         section.classList.toggle('hidden');
+      } else {
+        section.classList.add('hidden');
       }
-    }
-  </script>
+    });
+  }
+</script>
   
 </html>

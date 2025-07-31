@@ -55,13 +55,13 @@ async function cargar() {
           .join('');
 
         card.innerHTML = `
-          <button onclick="toggleSection('${materia.codmateria}')" class="poppins-bold text-[#3D0814] hover:underline w-full text-left break-words lg:text-[20px]">
-            ➤ ${materia.nombre}
-          </button>
-          <div id="${materia.codmateria}" class="mt-1 ml-4 hidden space-y-1 text-sm text-[#442F38] lg:text-[18px]">
-            ${archivosHTML || '<p class="text-gray-500 lg:text-[18px] ">No hay archivos.</p>'}
+          <details class="poppins-bold text-[#3D0814] lg:text-[20px] w-full">
+          <summary class="cursor-pointer hover:underline"> ${materia.nombre}</summary>
+          <div class="mt-1 ml-4 space-y-1 text-sm text-[#442F38] lg:text-[18px]">
+            ${archivosHTML || '<p class="text-gray-500 lg:text-[18px]">No hay archivos.</p>'}
           </div>
-  `;
+        </details>
+          `;
         contenedor_materias.appendChild(card);
         
       });
