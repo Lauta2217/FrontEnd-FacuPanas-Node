@@ -40,6 +40,7 @@ async function cargar() {
       for(let j = 0; j<añotope;j++){
         const contenedor_materias = document.getElementById('anio'+(j+1));
         contenedor_materias.innerHTML = '';
+        contenedor_materias.setAttribute('data-aos', 'fade-up');
         materiaporaño[j].forEach(materia => {
         const card = document.createElement('div');
         // Generar HTML de archivos correspondientes a la materia
@@ -54,11 +55,12 @@ async function cargar() {
         card.innerHTML = `
           <details class="poppins-bold text-[#3D0814] lg:text-[20px] w-full">
           <summary class="cursor-pointer hover:underline"> ${materia.nombre}</summary>
-          <div class="mt-1 ml-4 space-y-1 text-sm text-[#442F38] lg:text-[18px]">
+          <div class="mt-1 ml-4 space-y-1 text-sm text-[#442F38] lg:text-[18px] ">
             ${archivosHTML || '<p class="text-gray-500 lg:text-[18px]">No hay archivos.</p>'}
           </div>
         </details>
           `;
+        card.setAttribute('data-aos', 'fade-up');
         contenedor_materias.appendChild(card);
         
       });
@@ -66,6 +68,9 @@ async function cargar() {
     }
     document.addEventListener('DOMContentLoaded', async () => {
     await cargar();      // tu función que genera contenido dinámico
-    AOS.init();          // Inicializa AOS
+    AOS.init({
+    duration: 900, // duración de la animación
+    once: true,     // solo una vez por scroll
+  });         // Inicializa AOS
     AOS.refresh();       // Refresca por si acaso
   });
