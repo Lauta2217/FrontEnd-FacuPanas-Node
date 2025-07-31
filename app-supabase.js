@@ -28,10 +28,10 @@ async function cargar() {
       // Crear botones para cada año
       for( let h = 0; h< añotope;h++){
           const año = document.createElement('div');
-          año.className = 'mb-4 rounded-md border border-[#3D0814]' 
+          año.className = 'mb-4 rounded-md border border-[#3D0814] shadow-md shadow-black/25' 
           año.setAttribute('data-aos', 'fade-up');
           año.innerHTML = `
-<button onclick="toggleSection('anio${h+1}')" class="w-full rounded-t-md bg-[#3D0814] px-4 py-2 text-left poppins-black text-[#E7F9A9] lg:text-[30px]">📘 ${h+1}º Año</button>
+<button onclick="toggleSection('anio${h+1}')" class="w-full rounded-t-md bg-[#3D0814] px-4 py-2 text-left poppins-black text-[#E7F9A9] lg:text-[30px] cursor-pointer ">📘 ${h+1}º Año</button>
 <div id="anio${h+1}" class="year-section space-y-2 bg-[#C6B38E]/30 px-4  poppins-bold" >
           `
           contenedor_años.appendChild(año);
