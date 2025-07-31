@@ -84,11 +84,28 @@
 <script defer>
   function toggleSection(id) {
     const allSections = document.querySelectorAll('[id^="anio"]');
+    
     allSections.forEach(section => {
       if (section.id === id) {
-        section.classList.toggle('hidden');
+        // Alternar la sección clickeada
+        section.classList.toggle('open');
       } else {
-        section.classList.add('hidden');
+        // Cerrar las demás secciones con animación
+        if (section.classList.contains('open')) {
+          section.style.transition = 'all 0.3s ease';
+          section.style.maxHeight = section.scrollHeight + 'px';
+          
+          // Forzar reflow para que la animación funcione
+          void section.offsetHeight;
+          
+          section.classList.remove('open');
+          
+          // Resetear después de que termine la animación
+          setTimeout(() => {
+            section.style.transition = '';
+            section.style.maxHeight = '';
+          }, 300);
+        }
       }
     });
   }

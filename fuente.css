@@ -53,3 +53,15 @@
 }
 
 
+
+  .year-section {
+    overflow: hidden;
+    transition: all 0.3s ease;
+    max-height: 0;
+    opacity: 0;
+  }
+  
+  .year-section.open {
+    max-height: 2000px; /* Un valor lo suficientemente grande */
+    opacity: 1;
+  }
