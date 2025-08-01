@@ -59,7 +59,6 @@ async function cargar() {
           </div>
         </details>
           `;
-        card.setAttribute('data-aos', 'fade-up');
         contenedor_materias.appendChild(card);
         
       });
