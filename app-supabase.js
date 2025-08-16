@@ -63,8 +63,27 @@ async function cargar() {
       });
       }
     }
-    document.addEventListener('DOMContentLoaded', async () => {
-    await cargar();      // tu función que genera contenido dinámico
-    AOS.init();         // Inicializa AOS
-    AOS.refresh();       // Refresca por si acaso
-  });
+  document.addEventListener('DOMContentLoaded', async () => {
+  const loader = document.getElementById('loader');
+  const contenedor = document.getElementById('años-container');
+
+  try {
+    await cargar(); // tu función que trae los datos dinámicos
+
+    // Inicializar animaciones
+    AOS.init();
+    AOS.refresh();
+
+    // Ocultar loader y mostrar contenido
+    loader.classList.add('opacity-0'); 
+    setTimeout(() => {
+      loader.style.display = 'none';
+      contenedor.classList.add('fade-in'); // animación suave al mostrar años
+    }, 500);
+
+  } catch (error) {
+    console.error("Error cargando datos:", error);
+    loader.innerHTML = "<p class='text-red-500'>Error al cargar los datos</p>";
+  }
+});
+
