@@ -8,103 +8,98 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script src="app-supabase.js" defer></script>
-    <title>Licenciatura en Ciencias de la Computacion</title>
-</head>
-<body class="bg-[#FFFBEE] min-h-screen flex flex-col">
-  <body class="bg-[#FFFBEE] min-h-screen flex flex-col">
-   <!-- Loader -->
-   <div id="loader" class="fixed inset-0 bg-[#3D0814] flex flex-col items-center justify-center z-50">
-      <div class="w-12 h-12 border-4 border-[#E7F9A9] border-t-transparent rounded-full animate-spin"></div>
-      <p class="mt-4 text-[#E7F9A9] poppins-bold">Cargando...</p>
-   </div>
+    <!-- en el <head> -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-   <!--navbar-->
-     <header class="w-full h-20">
-    <nav class="w-full h-full bg-[#3D0814] flex items-center px-3">
-        <a href="index.html" class="flex items"> 
-            <!-- SVG original restaurado -->
-            <svg width="55" height="59" viewBox="0 0 55 59" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M27.9365 39.5531C27.594 39.5531 27.2543 39.4848 26.9161 39.3464L11.271 32.7724C10.9884 33.702 10.8457 34.8978 10.8457 36.6456C11.8661 37.39 12.8622 38.886 12.8622 41.4682C12.8622 43.0487 12.2343 44.1852 11.6948 44.9422C14.0153 48.3335 20.4029 50.7736 27.9393 50.7736C37.4351 50.7736 45.1314 46.9022 45.1314 42.1335C45.1314 41.0798 45.1314 36.7768 45.1314 32.553L28.954 39.3464C28.62 39.4848 28.2804 39.5531 27.9365 39.5531Z" fill="white"/>
-            <mask id="mask0_141_7" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="11" width="55" height="48">
-                <path d="M0 11.5866H54.8V59H0V11.5866Z" fill="white"/>
-            </mask>
-            <g mask="url(#mask0_141_7)">
-                <path d="M54.0653 22.4998L28.2765 11.6678C28.0538 11.5761 27.8198 11.5761 27.5986 11.6678L1.80978 22.4998C1.37167 22.6833 1.07483 23.2011 1.07483 23.7837C1.07483 24.3645 1.37167 24.8824 1.80978 25.0658L7.72219 27.549C6.36075 29.5378 5.57015 32.3393 5.28045 36.8994C4.34571 37.455 3.6864 38.6382 3.6864 40.0299C3.6864 41.4469 4.35998 42.6516 5.32326 43.1947C4.48271 52.4155 0.101562 55.4886 0.101562 56.2762C0.101562 56.6771 3.49517 58.9842 4.30004 58.9842C5.54731 58.9842 8.53848 56.3193 8.53848 50.5653C8.53848 47.1758 8.29587 44.6134 8.04043 42.7973C8.72971 42.1661 9.20921 41.1879 9.20921 40.0299C9.20921 38.7658 8.64836 37.7085 7.84634 37.1008C8.30016 29.5755 10.1454 28.315 14.6107 25.9811C15.0588 25.7599 15.9037 25.3283 16.3903 25.0748C17.2679 24.6199 18.06 24.2135 18.822 23.8287C21.2781 22.6005 23.353 21.6116 24.9371 20.8779C26.6724 20.0975 27.4502 19.8134 27.4773 19.8026C28.1423 19.5203 28.8816 19.9735 29.1085 20.8258C29.3339 21.6763 28.9729 22.5969 28.2964 22.8847C28.2451 22.9062 25.2282 23.9923 17.3778 28.0795C16.8726 28.3438 16.3903 28.5812 15.9336 28.8095C15.0032 29.2717 14.2311 29.6421 13.5846 30.0161L27.5986 35.8996C27.7099 35.9446 27.8212 35.9679 27.9368 35.9679C28.0538 35.9679 28.1652 35.9446 28.2765 35.8978L54.0653 25.0658C54.5034 24.8824 54.8002 24.3645 54.8002 23.7837C54.8002 23.2011 54.5034 22.6833 54.0653 22.4998Z" fill="white"/>
-            </g>
-        </svg>
-        <div class="flex flex-col px-2 mt-2">
-            <p class="text-white text-xl ">FacuPanas</p>
-            <!--Tu Campus Virtual, siempre a mano-->
-            <p class="text-white text-[10px]">El estudio hecho fácil</p>
-        </div>
-    </a>
-    <a href="formulario.html" class="w-[54px] h-[54px] ml-auto mt-2">
-        <img src="Icono descarga.png" alt="Icono descarga">
-    </a>
-    <a href="chatbot.html" class="w-[54px] h-[54px] mt-2 ml-2">
+
+    <title>Formulario archivo</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        } 
+        input::placeholder {
+            color: #726855;
+            opacity: 0.7; /* Opacidad del placeholder */
+            font-family: poppins;
+        }
+        </style>
+</head>
+<body class="bg-[url(fondo.jpg)] bg-center bg-no-repeat bg-cover lg:bg-repeat lg:bg-[length:50%_100%] min-h-screen flex flex-col">
+    <!--navbar-->
+    <header class="w-full h-20">
+        <nav class="w-full h-full bg-[#3D0814] flex items-center px-3 justify-center">
+            <a href="index.html" class="flex items"> 
+                <svg width="55" height="59" viewBox="0 0 55 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M27.9365 39.5531C27.594 39.5531 27.2543 39.4848 26.9161 39.3464L11.271 32.7724C10.9884 33.702 10.8457 34.8978 10.8457 36.6456C11.8661 37.39 12.8622 38.886 12.8622 41.4682C12.8622 43.0487 12.2343 44.1852 11.6948 44.9422C14.0153 48.3335 20.4029 50.7736 27.9393 50.7736C37.4351 50.7736 45.1314 46.9022 45.1314 42.1335C45.1314 41.0798 45.1314 36.7768 45.1314 32.553L28.954 39.3464C28.62 39.4848 28.2804 39.5531 27.9365 39.5531Z" fill="white"/>
+<mask id="mask0_141_7" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="11" width="55" height="48">
+<path d="M0 11.5866H54.8V59H0V11.5866Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_141_7)">
+<path d="M54.0653 22.4998L28.2765 11.6678C28.0538 11.5761 27.8198 11.5761 27.5986 11.6678L1.80978 22.4998C1.37167 22.6833 1.07483 23.2011 1.07483 23.7837C1.07483 24.3645 1.37167 24.8824 1.80978 25.0658L7.72219 27.549C6.36075 29.5378 5.57015 32.3393 5.28045 36.8994C4.34571 37.455 3.6864 38.6382 3.6864 40.0299C3.6864 41.4469 4.35998 42.6516 5.32326 43.1947C4.48271 52.4155 0.101562 55.4886 0.101562 56.2762C0.101562 56.6771 3.49517 58.9842 4.30004 58.9842C5.54731 58.9842 8.53848 56.3193 8.53848 50.5653C8.53848 47.1758 8.29587 44.6134 8.04043 42.7973C8.72971 42.1661 9.20921 41.1879 9.20921 40.0299C9.20921 38.7658 8.64836 37.7085 7.84634 37.1008C8.30016 29.5755 10.1454 28.315 14.6107 25.9811C15.0588 25.7599 15.9037 25.3283 16.3903 25.0748C17.2679 24.6199 18.06 24.2135 18.822 23.8287C21.2781 22.6005 23.353 21.6116 24.9371 20.8779C26.6724 20.0975 27.4502 19.8134 27.4773 19.8026C28.1423 19.5203 28.8816 19.9735 29.1085 20.8258C29.3339 21.6763 28.9729 22.5969 28.2964 22.8847C28.2451 22.9062 25.2282 23.9923 17.3778 28.0795C16.8726 28.3438 16.3903 28.5812 15.9336 28.8095C15.0032 29.2717 14.2311 29.6421 13.5846 30.0161L27.5986 35.8996C27.7099 35.9446 27.8212 35.9679 27.9368 35.9679C28.0538 35.9679 28.1652 35.9446 28.2765 35.8978L54.0653 25.0658C54.5034 24.8824 54.8002 24.3645 54.8002 23.7837C54.8002 23.2011 54.5034 22.6833 54.0653 22.4998Z" fill="white"/>
+</g>
+                </svg>
+                <div class="flex flex-col px-2 mt-2">
+                    <p class="text-white text-xl ">FacuPanas</p>
+                    <p class="text-white text-[10px]">El estudio hecho fácil</p>
+                </div>
+            </a>
+        <a href="chatbot.html" class="w-[54px] h-[54px] mt-2 ml-auto">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 430 430" width="430" height="430" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;"><defs><clipPath id="__lottie_element_1296"><rect width="430" height="430" x="0" y="0"/></clipPath><clipPath id="__lottie_element_1298"><path d="M0,0 L430,0 L430,430 L0,430z"/></clipPath><g id="__lottie_element_1308"><g transform="matrix(1.069558024406433,-0.03075367957353592,0.03075367957353592,1.069558024406433,217.32061767578125,188.36863708496094)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" class="primary" stroke="rgb(18,19,49)" stroke-opacity="1" stroke-width="0" d=" M61.5,-87.625 C61.5,-54.487998962402344 34.637001037597656,-27.624000549316406 1.5,-27.624000549316406 C-31.636999130249023,-27.624000549316406 -58.500999450683594,-54.487998962402344 -58.500999450683594,-87.625 C-58.500999450683594,-120.76200103759766 -31.636999130249023,-147.625 1.5,-147.625 C34.637001037597656,-147.625 61.5,-120.76200103759766 61.5,-87.625z"/><path class="primary" fill="rgb(18,19,49)" fill-opacity="1" d=" M61.5,-87.625 C61.5,-54.487998962402344 34.637001037597656,-27.624000549316406 1.5,-27.624000549316406 C-31.636999130249023,-27.624000549316406 -58.500999450683594,-54.487998962402344 -58.500999450683594,-87.625 C-58.500999450683594,-120.76200103759766 -31.636999130249023,-147.625 1.5,-147.625 C34.637001037597656,-147.625 61.5,-120.76200103759766 61.5,-87.625z"/></g></g></g><filter id="__lottie_element_1320" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%"><feComponentTransfer in="SourceGraphic"><feFuncA type="table" tableValues="1.0 0.0"/></feComponentTransfer></filter><mask id="__lottie_element_1308_2" mask-type="alpha" maskUnits="userSpaceOnUse"><g filter="url(#__lottie_element_1320)"><rect width="430" height="430" x="0" y="0" fill="#ffffff" opacity="0"/><use xmlns:ns1="http://www.w3.org/1999/xlink" ns1:href="#__lottie_element_1308"/></g></mask></defs><g clip-path="url(#__lottie_element_1296)"><g clip-path="url(#__lottie_element_1298)" transform="matrix(1,0,0,1,0,0)" opacity="1" style="display: block;"><g transform="matrix(1.069558024406433,-0.03075367957353592,0.03075367957353592,1.069558024406433,217.61849975585938,188.44097900390625)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" class="secondary" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="18" d=" M29.947999954223633,169.7169952392578 C29.947999954223633,185.4290008544922 17.211999893188477,198.16600036621094 1.5,198.16600036621094 C-14.211999893188477,198.16600036621094 -26.948999404907227,185.4290008544922 -26.948999404907227,169.7169952392578 C-26.948999404907227,154.0050048828125 -14.211999893188477,141.2689971923828 1.5,141.2689971923828 C17.211999893188477,141.2689971923828 29.947999954223633,154.0050048828125 29.947999954223633,169.7169952392578z"/></g></g><g mask="url(#__lottie_element_1308_2)" style="display: block;"><g transform="matrix(1.069558024406433,-0.03075367957353592,0.03075367957353592,1.069558024406433,217.60311889648438,187.9062042236328)" opacity="1"><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" class="primary" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="18" d=" M1.5,-56.96699905395508 C1.5,-56.96699905395508 1.5,-56.96699905395508 1.5,-56.96699905395508 C43.67300033569336,-56.96699905395508 77.86100006103516,-22.77899932861328 77.86100006103516,19.395000457763672 C77.86100006103516,19.395000457763672 77.86100006103516,123.77200317382812 77.86100006103516,123.77200317382812 C77.86100006103516,133.69500732421875 69.81700134277344,141.73899841308594 59.89400100708008,141.73899841308594 C59.89400100708008,141.73899841308594 -56.89500045776367,141.73899841308594 -56.89500045776367,141.73899841308594 C-66.81800079345703,141.73899841308594 -74.86199951171875,133.69500732421875 -74.86199951171875,123.77200317382812 C-74.86199951171875,123.77200317382812 -74.86199951171875,19.395000457763672 -74.86199951171875,19.395000457763672 C-74.86199951171875,-22.77899932861328 -40.67300033569336,-56.96699905395508 1.5,-56.96699905395508z"/></g><g opacity="1" transform="matrix(1,0,0,1,1.86899995803833,4.205999851226807)"><path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" class="secondary" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="21" d=" M-28.194000244140625,21.232999801635742 C-28.194000244140625,21.232999801635742 -28.136999130249023,21.197999954223633 -28.136999130249023,21.197999954223633 M-0.16699999570846558,21.2189998626709 C-0.16699999570846558,21.2189998626709 -0.10999999940395355,21.18400001525879 -0.10999999940395355,21.18400001525879 M28.111000061035156,21.184999465942383 C28.111000061035156,21.184999465942383 28.167999267578125,21.14900016784668 28.167999267578125,21.14900016784668"/></g></g></g><g transform="matrix(1.0579009056091309,-0.16045551002025604,0.16045551002025604,1.0579009056091309,217.43519592285156,201.35789489746094)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" class="secondary" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="18" d=" M102.75,10.531000137329102 C102.75,10.531000137329102 102.78099822998047,93.84400177001953 102.78099822998047,93.84400177001953"/></g></g><g transform="matrix(1.0660940408706665,-0.09134365618228912,0.09134365618228912,1.0660940408706665,1.8050899505615234,200.3661346435547)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" class="secondary" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="18" d=" M102.75,10.531000137329102 C102.75,10.531000137329102 102.78099822998047,93.84400177001953 102.78099822998047,93.84400177001953"/></g></g><g transform="matrix(1.069558024406433,-0.03075367957353592,0.03075367957353592,1.069558024406433,217.32061767578125,168.50704956054688)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" class="primary" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="18" d=" M61.5,-87.625 C61.5,-54.487998962402344 34.637001037597656,-27.624000549316406 1.5,-27.624000549316406 C-31.636999130249023,-27.624000549316406 -58.500999450683594,-54.487998962402344 -58.500999450683594,-87.625 C-58.500999450683594,-120.76200103759766 -31.636999130249023,-147.625 1.5,-147.625 C34.637001037597656,-147.625 61.5,-120.76200103759766 61.5,-87.625z"/></g><g opacity="1" transform="matrix(1,0,0,1,-3.111420154571533,0.7086458802223206)"><path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" class="secondary" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="21" d=" M-15.916999816894531,-101.71199798583984 C-15.916999816894531,-101.71199798583984 -15.802000045776367,-101.48200225830078 -15.802000045776367,-101.48200225830078 M21.552000045776367,-101.53099822998047 C21.552000045776367,-101.53099822998047 21.66699981689453,-101.302001953125 21.66699981689453,-101.302001953125"/></g></g></g></g></svg>
     </a>
-    
-    </nav>
-</header>
-    <!--Info carrera-->
-    <main>
-        <div class=" w-full h-auto flex flex-col items-center bg-[#D6CAB2] rounded-b-lg shadow-md shadow-black/25 lg:flex-row">
-            <div class="w-[90%] h-[60%] mt-8  m-auto text-wrap lg:w-[50%] lg:ml-10" >
-                <h1 class="text-[24px] text-[#3D0814] poppins-black lg:text-[32px]">Licenciatura en Ciencias de la Computación</h1>
-                <p class="text-[16px] poppins-regular mt-2 lg:text-[18px] lg:mt-10">La Licenciatura en Ciencias de la Computación forma profesionales con sólidos conocimientos teóricos y prácticos sobre algoritmos, estructuras de datos, programación, arquitectura de computadoras, inteligencia artificial, bases de datos y más. Está orientada al diseño y análisis de software complejo, investigación en informática y desarrollo de tecnologías innovadoras.</p>
+        </nav>
+    </header>
+    <main class="flex-grow">
+        <div class="w-[90%] h-auto bg-[#D6CAB2] mx-auto mt-20 rounded-xl shadow-md shadow-2xl shadow-black/50 pt-5 text-wrap lg:w-[50%]">
+            <div class="w-[85%] h-auto  mx-auto">
+                <h1 class=" text-[20px] text-[#3D0814] poppins-black mx-auto lg:text-[32px]">Comparte tu material con la comunidad</h1>
+                <p class="mt-3 text-[12px] poppins-regular lg:text-[18px]">¿Tenés guías, parciales, apuntes o trabajos que puedan ayudar a otros estudiantes? Subí tus archivos aquí de forma rápida, segura y sencilla.</p>
+                <form class="flex flex-col items-left  mt-5" id="formulario">
+                    <!--Label nombre y apellido-->
+                    <div class="rounded-md max-w-xl">
+                        <label class="block text-[#3D0814] text-[15px] poppins-regular mb-1 lg:text-[22px]" for="nombre-apellido">Nombre y Apellido</label>
+                        <input type="text" id="nombre-apellido" class="w-full px-3 py-2  bg-[#C6B38E] rounded-md poppins-bold" placeholder="Ej: Juan Pérez" required />
+                        <p class=" text-[#121212] text-[12px] opacity-70 mt-2 poppins-regular lg:text-[16px]">
+                        Tu nombre y apellido para que otros sepan quién comparte.
+                        </p>
+                    </div>
+                    <!--Label archivo a subir-->
+                    <div class="rounded-md max-w-xl mt-3">
+                        <label class="block text-[#3D0814] text-[15px] poppins-regular mb-1 lg:text-[22px]" for="archivo">Archivo a subir</label>
+                        <input type="text" id="link_archivo" class="w-full px-3 py-2  bg-[#C6B38E] rounded-md poppins-bold" placeholder="Ingresar el link de drive del archivo" required />
+                        <p class=" text-[#121212] text-[12px] opacity-70 mt-2 poppins-regular lg:text-[16px]">
+                        Formatos permitidos: pdf, word, presentación, excel, txt, py, java, cpp.
+                        </p>
+                    </div>
+                    <!--Label descripcion-->
+                    <div class="rounded-md max-w-xl mt-3">
+                        <label class="block text-[#3D0814] text-[15px] poppins-regular mb-1 lg:text-[22px]" for="descripcion">Descripción del material</label>
+                        <textarea id="descripcion" class="w-full px-3 py-2 bg-[#C6B38E] rounded-md poppins-bold" rows="4" placeholder="Agrega informacion sobre el archivo que subes.." required></textarea>
+                        <p class=" text-[#121212] text-[12px] opacity-70 mt-2 poppins-regular lg:text-[16px]">
+                        Máximo 250 caracteres.
+                        </p>
+                    </div>
+                    <!--boton enviar-->
+                        <button type="submit" class="w-full h-[40px] bg-[#E7F9A9] rounded-xl shadow-md shadow-2xl shadow-black/50 mb-5 mt-5 text-[#3D0814] poppins-bold items-center justify-center hover:bg-[#3D0814] hover:text-white hover:cursor-pointer transition duration-300 lg:text-[32px] lg: h-[50px]" id="button-form">ENVIAR ARCHIVO</button>                    
             </div>
-            <div class="hidden lg:w-auto lg:h-auto lg:block lg:mr-[5%]">
-                <img src="Img-LCC.webp" alt="Estudiante de Ciencias de la Computación"
-                    class="w-[500px] h-[350px] lg:mx-auto" />
+            </form>
             </div>
         </div>
     </main>
-    <div class=" w-full mx-auto max-w-3xl p-4 mt-10 " id="años-container"  >
-      <!--ACA VAN AÑOS-->
-      </div>
     <!--footer-->
-    <footer class="w-full h-20 bg-[#3D0814] flex items-center justify-center mt-auto mb-0">
+    <footer class="w-full h-20 bg-[#3D0814] flex items-center justify-center mt-20">
         <div class="flex flex-col  px-2 items-center">
                 <p class="text-white text-[14px] poppins-regular">© 2025 FacuPanas. Todos los derechos reservados.</p>
                 <p class="text-white text-[13px] poppins-regular">“Proyecto estudiantil sin fines de lucro.”</p>
             </div>
     </footer>
-</body>
-<script defer>
-  function toggleSection(id) {
-    const allSections = document.querySelectorAll('[id^="anio"]');
-    
-    allSections.forEach(section => {
-      if (section.id === id) {
-        // Alternar la sección clickeada
-        section.classList.toggle('open');
-      } else {
-        // Cerrar las demás secciones con animación
-        if (section.classList.contains('open')) {
-          section.style.transition = 'all 0.3s ease';
-          section.style.maxHeight = section.scrollHeight + 'px';
-          
-          // Forzar reflow para que la animación funcione
-          void section.offsetHeight;
-          
-          section.classList.remove('open');
-          
-          // Resetear después de que termine la animación
-          setTimeout(() => {
-            section.style.transition = '';
-            section.style.maxHeight = '';
-          }, 300);
-        }
-      }
-    });
-  }
-
-
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="logica-form.js"></script>
+<script>
+  AOS.init({
+    duration: 700, // duración de la animación
+    once: true,     // solo una vez por scroll
+  });
 </script>
-  
+</body>
 </html>
